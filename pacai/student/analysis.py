@@ -11,50 +11,55 @@ NOT_POSSIBLE = None
 
 def question2():
     """
-    [Enter a description of what you did here.]
+    I made the noise extremely small, 0.01 so
+    that the agent would be encouraged to act non stochastically
+    and move across the bridge
     """
 
     answerDiscount = 0.9
-    answerNoise = 0.2
+    answerNoise = 0.01
 
     return answerDiscount, answerNoise
 
 def question3a():
     """
-    [Enter a description of what you did here.]
+    Lowered noise, and high penalty for living to encourage agent to move along cliff,
+    but finish as soon as possible
     """
 
     answerDiscount = 0.9
-    answerNoise = 0.2
-    answerLivingReward = 0.0
+    answerNoise = 0.01
+    answerLivingReward = -5.0
 
     return answerDiscount, answerNoise, answerLivingReward
 
 def question3b():
     """
-    [Enter a description of what you did here.]
+    Lowered noise, and a fairly high living penalty,
+    forcing agent away from the cliff, but encouraging it to
+    stop as quick as possible
     """
 
-    answerDiscount = 0.9
-    answerNoise = 0.2
-    answerLivingReward = 0.0
+    answerDiscount = 0.1
+    answerNoise = 0.01
+    answerLivingReward = -1.0
 
     return answerDiscount, answerNoise, answerLivingReward
 
 def question3c():
     """
-    [Enter a description of what you did here.]
+    Lowered noise, agent acts non stochastically, moves along cliff to high reward
     """
 
     answerDiscount = 0.9
-    answerNoise = 0.2
+    answerNoise = 0.01
     answerLivingReward = 0.0
 
     return answerDiscount, answerNoise, answerLivingReward
 
 def question3d():
     """
-    [Enter a description of what you did here.]
+    Agent behaves like this by default, no change necessary
     """
 
     answerDiscount = 0.9
@@ -65,7 +70,7 @@ def question3d():
 
 def question3e():
     """
-    [Enter a description of what you did here.]
+    Agent behaves like this by default, no change necessary
     """
 
     answerDiscount = 0.9
@@ -76,13 +81,9 @@ def question3e():
 
 def question6():
     """
-    [Enter a description of what you did here.]
+    50 iterations not enough, not a possible thing
     """
-
-    answerEpsilon = 0.3
-    answerLearningRate = 0.5
-
-    return answerEpsilon, answerLearningRate
+    return NOT_POSSIBLE
 
 if __name__ == '__main__':
     questions = [
